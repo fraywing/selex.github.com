@@ -1,0 +1,157 @@
+ .clicky{
+        color:rgba(255,255,255,0.9);
+        cursor:pointer;
+        text-shadow:0 -1px 0 #141414;
+    }
+    
+    .nSelect{
+         position:relative;
+        display:inline-block;
+        transition:all 2s ease-In-Out;
+    }
+    .nSelect *{
+         -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s  ease-in-out;
+  -o-transition: all 0.2s  ease-in-out;
+  transition: all 0.2s  ease-in-out;
+    }
+    .nActualInner{
+        display:none;
+    }
+    .nContainer,.nText,.nArrow{
+        display:inline-block;
+    }
+    .nContainer{
+        background:#635e58;
+           border:1px solid rgba(2,2,2,0.6);
+           box-shadow:0 0 3px 0 rgba(2,2,2,0.5), inset 0 1px 0 0 rgba(255,255,255,0.5);
+              border-radius:5px;
+               -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+    }
+    .nContainerSel{
+        background:#56524e;
+        border-bottom:0px;
+        border-radius:5px 5px 0px  0px;
+    }
+    .nText,.nArrow{
+        padding:4px;
+        color:rgba(255,255,255,0.9);
+        text-shadow:0 1px 0 rgba(2,2,2,0.5);
+    }
+    .nArrow{
+        border-left:1px solid rgba(2,2,2,0.3);
+    }
+    .nText{
+        border-right:1px solid rgba(255,255,255,0.3);
+    }
+    .nActualInner{
+         background:#56524e;
+        padding:4px;
+        position:absolute;
+        color:rgba(255,255,255,0.9);
+        text-shadow:0 1px 0 rgba(2,2,2,0.5);
+        border-radius:0px 6px 6px 6px;
+           border:1px solid rgba(2,2,2,0.5);
+           border-top:0px;
+           box-shadow:0 1px 3px -3px rgba(2,2,2,0.5);
+        margin-top:0px;
+        width:100%;
+      -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+    }
+    .nSelected{
+          background:#486c91;
+        box-shadow:inset 0 2px 4px 0px rgba(2,2,2,0.6);
+        border-radius:0 4px 4px 0;
+        border-bottom:1px solid rgba(255,255,255,0.5);
+    }
+    .nPreIcon{
+        margin-right:3px;
+        vertical-align:bottom;
+    }
+    .nItemSelected{
+        background:#486c91;
+        box-shadow:inset 0 0 10px 0px #56524E, inset 0px -1px 0px 0px rgba(255,255,255,0.4);
+        color:rgba(255,255,255,0.8);
+        text-shadow:0 -1px 0 rgba(2,2,2,0.5),0 0 9px rgba(255,255,255,0.6);
+        border-radius:4px;
+    }
+    .nActualInner li{
+        list-style:none;
+        text-align:left;
+      
+    }
+    .selItem{
+       display:block;
+         padding:4px;
+    }
+    .selInput{
+        width:100%;
+        padding:3px;
+        display:inline-block;
+          -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size:1.1em;
+        border-radius:5px;
+      
+    }
+    .selInput input{
+         background:#494643;
+         color:rgba(255,255,255,1);
+         text-shadow:0 1px 0 #3f3c38;
+          box-shadow:inset 0 2px 4px 0px rgba(2,2,2,0.2);
+          border:1px solid rgba(255,255,255,0.4);
+    }
+    
+    .nSelect.crystal .nContainer{
+         background: none repeat scroll 0 0 #d3dadc;
+         box-shadow: 0 0 3px 0 rgba(2, 2, 2, 0.5), 0 1px 0 0 rgba(255, 255, 255, 1) inset;
+    }
+    .nSelect.crystal .nContainerSel{
+             background: none repeat scroll 0 0 #d3dadc;
+    }
+    .selItem{
+        
+    }
+    .nSelect.crystal .nActualInner{
+        background: none repeat scroll 0 0 #d3dadc;
+         color:#36464b;
+          text-shadow: 0 1px 0 #ffffff;
+    }
+    
+
+    .nSelect.crystal .selInput input {
+    background: none repeat scroll 0 0 #e8e7e6;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 4px 0 rgba(2, 2, 2, 0.2) inset;
+    color: #36464b;
+    text-shadow: 0 1px 0 #ffffff;
+}
+   .nSelect.crystal .nSelected{
+          background:#b4d0d3;
+        box-shadow:inset 0 2px 4px 0px rgba(2,2,2,0.6);
+        border-radius:0 4px 4px 0;
+        border-bottom:1px solid rgba(255,255,255,0.5);
+    }
+   .nSelect.crystal .nItemSelected{
+    background:#94bcc0;
+        box-shadow:inset 0 0 10px #D3DADC, inset 0px -1px 0px 0px rgba(255,255,255,1);
+        color:rgba(255,255,255,0.8);
+        text-shadow:0 1px 1px rgba(2,2,2,0.1),0 0 9px rgba(255,255,255,0.6);
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+   }
+    .nSelect.crystal .nText, .nSelect.crystal  .nArrow {
+    color: rgba(2, 2, 2, 0.7);
+    padding: 4px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+

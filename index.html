@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Selex Example</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/selex.css" type="text/css">
+            <link rel="stylesheet" href="test.css" type="text/css">
+        <script src="js/selex.js" type="text/javascript"></script>
+    </head>
+    <div class="wrap">
+        <h5>Selex <h2>The powerful jQuery Select</h2></h5>
+        <div id="example1" class="example">
+            <div class="selex1"></div>
+            <div class="cont">
+                <p>
+                    <h3>Back to Basics</h3>
+                    A sweet <b>Selex</b> Select with basic drop-down, single select functionality.
+                </p>
+            </div>
+        </div>
+        <div id="example2" class="example">
+            <div class="selex2"></div>
+            <div class="cont">
+                <p><h3>Skinnable Sweetness!</h3>
+                   Completely skinnable, <b>Selex</b> also has a parameter for built in skins. (only "crystal" available right now)
+                </p>
+            </div>
+        </div>
+        <div id="example3" class="example">
+            <div class="selex3"></div><span class="vals"></span>
+             <div class="cont">
+                <p>
+                  <h3><b>Selex</b> is Totally decked out, dude!</h3>
+                  <ul>
+                    <li>Filter Entries</li>
+                    <li>Custom Callbacks</li>
+                    <li>Multi Select</li>
+                    <li>Custom Icons</li>
+                    ..and More!
+                  </ul>
+                </p>
+            </div>
+        </div>
+        <div>
+            <iframe src="http://ghbtns.com/github-btn.html?user=fraywing&repo=Selex&type=fork&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200" height="40"></iframe>
+        </div>
+    </div>
+    
+    <body></body>
+
+</html>
+<script>
+     $('.selex1').selex("Simple Test", {
+        options: {
+           "1" : "An Item",
+           "2" : "Sweet things",
+           "3" : "Cool thing",
+           "4" : "Another thing",
+           "5" : "Other Stuff"
+        },
+         multi: false,
+        icon: "&#9660;",
+        url: "php/selex.php"
+    });
+    
+    $('.selex2').selex("Its Skinned!", {
+        options: {
+           "1" : "An Item",
+           "2" : "Sweet things",
+           "3" : "Cool thing",
+           "4" : "Another thing",
+           "5" : "Other Stuff"
+        },
+        theme : "crystal",
+        icon: "&#9660;",
+        filter: true,
+        multi: false,
+        url: "php/selex.php"
+    });
+    $('.selex3').selex("Decked Out", {
+        options: {
+           "1" : "An Item",
+           "2" : "Sweet things",
+           "3" : "Cool thing",
+           "4" : "Another thing",
+           "5" : "Other Stuff"
+        },
+        icon: "&#9660;",
+        filter: true,
+        preicon : "&#9733;",
+        multi: true,
+        url: "php/selex.php",
+        onChange: function (items, toggled, value) {
+            // console.log(items,toggled,value);
+            var html = "";
+            for(var x in items){
+                html += " "+items[x]+" "+x+" ";
+            }
+            $('.vals').animate({"opacity" : "1"}, 200);
+            $('.vals').html(html);
+        },
+        onFilter: function (val, response) {
+            //console.log(val,response);
+            var h =  $('.vals').html();
+            h += "Filtered by "+val+"!";
+             $('.vals').animate({"opacity" : "1"}, 200);
+            $('.vals').html(h);
+        }
+    });
+</script>
